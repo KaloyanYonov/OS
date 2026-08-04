@@ -5,7 +5,7 @@ if [ $# -ne 1 ];then
 	exit 1
 fi
 
-if ! echo "1" | grep -E '^[0-9]+$';then
+if ! echo "$1" | grep -E '^[0-9]+$';then
 	echo "Must enter a valid number"
 	exit 2
 fi
