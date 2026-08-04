@@ -37,4 +37,4 @@ while IFS= read -r user; do
         sleep 2
         kill -9 "$max_pid" 2>/dev/null
     fi
-
+done < <(ps -eo user | tail -n +2 | tr -s ' ' | sort -u)
